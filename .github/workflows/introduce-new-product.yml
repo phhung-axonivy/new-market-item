@@ -1,0 +1,24 @@
+name: Introduce new product
+
+on: 
+  workflow_dispatch:
+    inputs:
+      productName:
+        description: 'Fill your product name: e.g.slack-connector'
+        required: true
+      groupId:
+        description: 'Fill groupId of product com.axonivy.connector.<myconnector> or com.axonivy.utils.<myutil>: e.g. com.axonivy.connector.slack'
+        required: true
+      version:
+        description: 'Fill the ivy version which you use for developing: e.g. 12.0.0'
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  raise-products:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
