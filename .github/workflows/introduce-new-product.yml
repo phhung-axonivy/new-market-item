@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       productName:
-        description: 'Fill your product name: e.g.slack-connector'
+        description: 'Fill product name: e.g.slack-connector'
         required: true
       groupId:
         description: 'Fill groupId of product com.axonivy.connector.<myconnector> or com.axonivy.utils.<myutil>: e.g. com.axonivy.connector.slack'
@@ -12,6 +12,9 @@ on:
       version:
         description: 'Fill the ivy version which you use for developing: e.g. 12.0.0'
         required: true
+      shortDescription:
+        description: 'Fill short description of product:'
+        required: false
 
 permissions:
   contents: read
