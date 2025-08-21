@@ -46,6 +46,7 @@ jobs:
           find . -type f -not -path "./.git/*" -not -path "./.github/*" -exec sed -i 's|<groupId>com.axonivy.market</groupId><!-- your group id: e.g. com.axonivy.connector.<myconnector> or com.axonivy.utils.<myutil> -->|<groupId>${{ github.event.inputs.groupId }}</groupId>|g' {} +
           find . -type f -not -path "./.git/*" -not -path "./.github/*" -exec sed -i 's|<!-- fill your product name -->||g' {} +
           find . -type f -not -path "./.git/*" -not -path "./.github/*" -exec sed -i 's|<!-- fill your product name + a "-modules" postfix -->||g' {} +
+          find . -type f -not -path "./.git/*" -not -path "./.github/*" -exec sed -i 's|<!-- fill your product name + a "-product" postfix e.g. my-connector-product -->||g' {} +
           find . -type f -not -path "./.git/*" -not -path "./.github/*" -exec sed -i 's|MY-GROUP-ID|${{ github.event.inputs.groupId }}|g' {} +
           find . -type f -not -path "./.git/*" -not -path "./.github/*" -exec sed -i 's|REPO-NAME|${{ github.event.inputs.repoName }}|g' {} +
 
