@@ -35,7 +35,9 @@ jobs:
 
       - name: Update Maven property
         run: |
-          mvn versions:set -DnewVersion=${{ github.event.inputs.version }}-SNAPSHOT -DgroupId=${{ github.event.inputs.groupId }} -DartifactId=${{ github.event.inputs.productName }} -DgenerateBackupPoms=false
+          find . -type f -exec sed -i 's/MY-PRODUCT-NAME/${{ github.event.inputs.productName }}/g' {} +
+          find . -type f -exec sed -i 's/\Q<version>12.0.0-SNAPSHOT</version><!-- identicate your minimal compliant ivy version with the first 2 digits -->\E/<version>${{ github.event.inputs.version }}</version>/g' {} +
+          find . -type f -exec sed -i 's/MY-GROUP-ID/${{ github.event.inputs.groupId }}/g' {} +
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
