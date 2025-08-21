@@ -38,15 +38,6 @@ jobs:
           mvn versions:set \
             -DnewVersion=${{ github.event.inputs.version }} \
             -DgenerateBackupPoms=false
-          mvn versions:set-artifactId \
-            -DartifactId=${{ github.event.inputs.productName }} \
-            -DgenerateBackupPoms=false
-          mvn versions:set-name \
-            -Dname=${{ github.event.inputs.productName }} \
-            -DgenerateBackupPoms=false
-          mvn versions:set-groupdId \
-            -DgroupdId=${{ github.event.inputs.groupId }} \
-            -DgenerateBackupPoms=false
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
