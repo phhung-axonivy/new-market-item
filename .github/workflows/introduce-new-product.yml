@@ -39,10 +39,10 @@ jobs:
             -DnewVersion=${{ github.event.inputs.version }} \
             -DgenerateBackupPoms=false
           mvn versions:set-artifactId \
-            -DartifactId=${{ github.event.inputs.name }} \
+            -DartifactId=${{ github.event.inputs.productName }} \
             -DgenerateBackupPoms=false
           mvn versions:set-name \
-            -Dname=${{ github.event.inputs.name }} \
+            -Dname=${{ github.event.inputs.productName }} \
             -DgenerateBackupPoms=false
           mvn versions:set-groupdId \
             -DgroupdId=${{ github.event.inputs.groupId }} \
