@@ -35,9 +35,7 @@ jobs:
 
       - name: Update Maven property
         run: |
-          mvn versions:set \
-            -DnewVersion=${{ github.event.inputs.version }} \
-            -DgenerateBackupPoms=false
+          mvn versions:set -DnewVersion=${{ github.event.inputs.version }}-SNAPSHOT -DgenerateBackupPoms=false
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
