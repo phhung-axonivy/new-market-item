@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       repoName:
-        description: 'Fill name of repository: e.g. slack-connector'
+        description: 'Fill the repository name: e.g. slack-connector'
         required: false
       productName:
-        description: 'Fill product name: e.g. slack-connector'
+        description: 'Fill the product name: e.g. slack-connector'
         required: true
       productType:
         description: 'Which type are you implementing?'
