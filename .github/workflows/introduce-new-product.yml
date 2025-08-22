@@ -48,8 +48,8 @@ jobs:
 
       - name: Update name, groupId, artifactId, version, document
         run: |
-          productName = "${{ github.event.inputs.productName }}"
-          productType = "${{ github.event.inputs.productType }}"
+          productName="${{ github.event.inputs.productName }}"
+          productType="${{ github.event.inputs.productType }}"
           groupId="com.axonivy.$productType.${productName//-productType/}"
           echo "Cleaned:  $groupId"
           find . -type f -not -path "./.git/*" -not -path "./.github/*" -exec sed -i 's|MY-PRODUCT-NAME|${{ github.event.inputs.productName }}|g' {} +
