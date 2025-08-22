@@ -11,8 +11,12 @@ on:
         required: true
       productType:
         description: 'Which type are you implementing?'
-        default: "connector,utils,demo"
         required: true
+        type: choice
+        options:
+          - connector
+          - utils
+          - demo
       groupId:
         description: 'Fill groupId of product com.axonivy.connector.<myconnector> or com.axonivy.utils.<myutil>: e.g. com.axonivy.connector.slack'
         required: true
