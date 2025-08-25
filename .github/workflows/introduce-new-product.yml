@@ -13,12 +13,12 @@ on:
           - demo
       productName:
         description: |
-          **Fill the product name:**
-          If product type **connector** is selected, the name should be end with **-connector**.
+          Fill the product name:
+          If product type connector is selected, the name should be end with -connector.
           Example: google-mail-connector
-          If product type **utils** is selected, the name should be end with **-utils**.
+          If product type utils is selected, the name should be end with -utils.
           Example: google-mail-utils
-          If product type **demo** is selected, the name should be end with **-demo**.
+          If product type demo is selected, the name should be end with -demo.
           Example: google-mail-demo
         required: true
       version:
