@@ -13,16 +13,10 @@ on:
           - demo
       productName:
         description: |
-          Fill the product name:
-          If product type connector is selected, the name should be end with -connector.
-          Example: google-mail-connector
-          If product type utils is selected, the name should be end with -utils.
-          Example: google-mail-utils
-          If product type demo is selected, the name should be end with -demo.
-          Example: google-mail-demo
+          Fill your product name. The name should be end with your product type that you selected above. Example: google-mail-connector | google-mail-utils | google-mail-demo
         required: true
       version:
-        description: 'Fill the ivy version which you use for developing: e.g. 12.0.0'
+        description: 'Fill the ivy version which you use for developing. Example: 12.0.0'
         required: true
 
 permissions:
