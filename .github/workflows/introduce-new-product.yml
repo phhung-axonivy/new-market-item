@@ -3,9 +3,8 @@ name: Introduce new product
 on: 
   workflow_dispatch:
     inputs:
-      productName:
-        description: 'Fill the product name: e.g. slack-connector'
-        required: true
+      branches:
+        - master
       productType:
         description: 'Which type are you implementing?'
         required: true
@@ -14,6 +13,9 @@ on:
           - connector
           - utils
           - demo
+      productName:
+        description: 'Fill the product name: e.g. slack-connector'
+        required: true
       version:
         description: 'Fill the ivy version which you use for developing: e.g. 12.0.0'
         required: true
