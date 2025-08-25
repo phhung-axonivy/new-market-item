@@ -1,18 +1,13 @@
-name: Create Repository
-
-on:
-  workflow_dispatch:
-
 jobs:
-  create_repo:
+  create-repo:
     runs-on: ubuntu-latest
     steps:
-      - name: Create a new repository
+      - name: Create repository
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.MY_PAT }}
         run: |
           curl --request POST \
           --url "https://api.github.com/user/repos" \
-          --header "Accept: application/vnd.github+json" \
           --header "Authorization: Bearer $GH_TOKEN" \
-          --data '{"name": "new-repo", "private": false}'
+          --header "Accept: application/vnd.github+json" \
+          --data '{"name":"new-repo-name"}'
