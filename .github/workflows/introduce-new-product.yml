@@ -2,9 +2,9 @@ name: Introduce new product
 
 on: 
   workflow_dispatch:
+    branches:
+      - master
     inputs:
-      branches:
-        - master
       productType:
         description: 'Which type are you implementing?'
         required: true
