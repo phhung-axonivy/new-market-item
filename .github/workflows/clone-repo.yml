@@ -1,3 +1,8 @@
+name: Create Repository
+
+on:
+  workflow_dispatch:
+
 jobs:
   create-repo:
     runs-on: ubuntu-latest
