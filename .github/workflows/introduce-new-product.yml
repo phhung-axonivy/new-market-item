@@ -2,8 +2,6 @@ name: Introduce new product
 
 on: 
   workflow_dispatch:
-    branches:
-      - master
     inputs:
       productType:
         description: 'Which type are you implementing?'
@@ -25,10 +23,17 @@ permissions:
   pull-requests: write
 
 jobs:
-  initiate-product:
+  only-master:
+
     runs-on: ubuntu-latest
 
+
+  initiate-product:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
     steps:
+      - run: echo "This runs only on the master branch"
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
