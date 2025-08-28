@@ -65,10 +65,10 @@ jobs:
 
       - name: Create new branch
         run: |
-          BRANCH="introduce-new-product-${{ github.event.inputs.productName }}"
+          BRANCH="introduce-new-product"
           git checkout -b "$BRANCH"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Initial new product ${{ github.event.inputs.productName }}"
+          git commit -m "Initial new product - ${{ github.event.inputs.productName }}"
           git push origin "$BRANCH"
