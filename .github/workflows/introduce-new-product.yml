@@ -5,7 +5,7 @@ on:
     inputs:
       productName:
         description: |
-          Product Name (as displayed as name on the website), i.e. check Axon Ivy Portal
+          Product Name (as displayed as name on the website), i.e. check (Axon Ivy Portal: https://market.axonivy.com/portal#tab-description)
         required: true
       productType:
         description: 'Category – choose between Connector (REST/SOAP connection), Utils (little helper), or Demo (demo process, i.e. best practice)'
