@@ -3,6 +3,10 @@ name: Introduce new product
 on: 
   workflow_dispatch:
     inputs:
+      productName:
+        description: |
+          Product Name (as displayed as name on the website), i.e. check Axon Ivy Portal
+        required: true
       productType:
         description: 'Category – choose between Connector (REST/SOAP connection), Util (little helper), or Demo (demo process, i.e. best practice)'
         required: true
@@ -11,10 +15,6 @@ on:
           - connector
           - utils
           - demo
-      productName:
-        description: |
-          Product Name (as displayed as name on the website), i.e. check Axon Ivy Portal
-        required: true
       version:
         description: 'Ivy version used for development (e.g. 12.0.0)'
         required: true
