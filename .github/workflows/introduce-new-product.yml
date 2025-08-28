@@ -8,7 +8,7 @@ on:
           Product Name (as displayed as name on the website), i.e. check Axon Ivy Portal
         required: true
       productType:
-        description: 'Category – choose between Connector (REST/SOAP connection), Util (little helper), or Demo (demo process, i.e. best practice)'
+        description: 'Category – choose between Connector (REST/SOAP connection), Utils (little helper), or Demo (demo process, i.e. best practice)'
         required: true
         type: choice
         options:
